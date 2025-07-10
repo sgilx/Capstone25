@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">    
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Globenest</title>
-    <link rel="stylesheet" href="./css/dest.css">
-    <script src="script.js" defer></script>
+  <meta charset="UTF-8" />
+  <title>Shop – Globenest</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Dependencies -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="./css/dest.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
 </head>
 <body>
+  <!-- Shared Navbar -->
+  <div id="navbar"></div>
+  <!-- Main Content -->
+  <main class="container" style="margin-top: 2rem;">
     <div id="destTitle">
         <section id="info">
             <h2>SEOUL</h2>
@@ -68,8 +74,25 @@
     <div id="recommend">
 
     </div>
-
-    <script src="script.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  </main>
+  <!-- Shared Footer -->
+  <div id="footer"></div>
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    fetch('navbar.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('navbar').innerHTML = html;
+        const elems = document.querySelectorAll('.sidenav');
+        M.Sidenav.init(elems);
+      });
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('footer').innerHTML = html;
+      });
+  </script>
 </body>
 </html>

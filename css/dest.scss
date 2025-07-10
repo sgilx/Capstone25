@@ -8,7 +8,7 @@ body {
     margin: 30px 30px;
 }
 
-h3 {
+main, h3 {
     @include flexCenter();
 }
 
@@ -18,7 +18,6 @@ h3 {
     img {
         max-width: 600px;
         margin: 0;
-        padding: 20px;
     }
 
     #info {
@@ -29,13 +28,23 @@ h3 {
 #attractions {
     @include flexCenter();
     flex-wrap: wrap;
-    img {
-        max-width: 250px;
-        margin: 0;
-    }
-
     #mini {
         padding: 20px;
     }
+
+    img {
+        max-width: 300px;
+        margin: 0;
+    }
+}
+#recommend {
+    display: flex;
+    justify-content: space-evenly;
 }
 
+#related {
+    justify-content: space-evenly;
+    img {
+        max-width: 200px;
+    }
+}

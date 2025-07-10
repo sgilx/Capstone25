@@ -2,7 +2,7 @@ body {
   margin: 30px 30px;
 }
 
-h3 {
+main, h3 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,7 +17,6 @@ h3 {
 #destTitle img {
   max-width: 600px;
   margin: 0;
-  padding: 20px;
 }
 #destTitle #info {
   padding: 20px;
@@ -29,10 +28,22 @@ h3 {
   align-items: center;
   flex-wrap: wrap;
 }
-#attractions img {
-  max-width: 250px;
-  margin: 0;
-}
 #attractions #mini {
   padding: 20px;
+}
+#attractions img {
+  max-width: 300px;
+  margin: 0;
+}
+
+#recommend {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#related {
+  justify-content: space-evenly;
+}
+#related img {
+  max-width: 200px;
 }/*# sourceMappingURL=dest.css.map */
