@@ -1,0 +1,97 @@
+/* ===== BASE LAYOUT ===== */
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Inter', sans-serif;
+  background-color: #fafafa;
+  color: #1a1a1a;
+}
+
+main {
+  flex: 1;
+}
+
+/* ===== NAVBAR STYLES ===== */
+nav {
+  padding: 0 20px;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.brand-logo iconify-icon {
+  font-size: 26px;
+  color: #1565c0;
+}
+
+.nav-links a {
+  font-weight: 600;
+  font-size: 1.05rem;
+  letter-spacing: 0.5px;
+  color: #1a1a1a;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #1565c0;
+  background-color: transparent;
+}
+
+/* ===== SIDENAV STYLES ===== */
+.sidenav {
+  padding-top: 20px;
+}
+
+.sidenav a {
+  color: #1565c0;
+  font-weight: 600;
+  font-size: 1.15rem;
+}
+
+.sidenav li {
+  margin: 10px 0;
+}
+
+.sidenav .logo-mobile {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.2rem;
+  margin-left: 16px;
+  margin-bottom: 16px;
+  color: #1565c0;
+}
+
+.sidenav-trigger {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.sidenav-trigger iconify-icon {
+  color: #1a1a1a;
+  cursor: pointer;
+  display: block;
+  margin: 0;
+}
+
+/* ===== FOOTER ===== */
+footer a:hover iconify-icon {
+  color: #1565c0;
+  transition: color 0.2s ease;
+}
+
+@media (max-width: 600px) {
+  footer .row {
+    text-align: center !important;
+  }
+}
