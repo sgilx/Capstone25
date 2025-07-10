@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Globenest Contact Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Core styles and fonts -->
+  <link rel="stylesheet" href="contactpage.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <!-- Optional icon library (remove if unused) -->
+  <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
+</head>
+
+<body style="font-family: 'Inter', sans-serif;">
+  <!-- Shared Navbar will be inserted here -->
+  <!-- Do not delete this element; it loads the site-wide navigation -->
+  <div id="navbar"></div>
+
+  <!-- Main content starts here -->
+  <!-- You can add your custom HTML content inside the <main> tag -->
+  <main class="container" style="margin-top: 2rem;">
+        <div class="container">
+        <h2>Contact Me</h2>
+        <div class="row">
+            <div class="col s12 m8 l6 xl6 center-form">
+            <form method="POST" action="#">
+                <div class="row">
+                <div class="input-field col s12">
+                    <input
+                    name="name"
+                    placeholder="John Doe"
+                    id="full_name"
+                    type="text"
+                    class="validate"
+                    />
+                    <label for="full_name">Your name</label>
+                </div>
+                </div>
+                <div class="row">
+                <div class="input-field col s12">
+                    <input
+                    name="email"
+                    placeholder="john.doe@example.com"
+                    id="email_address"
+                    type="email"
+                    class="validate"
+                    required
+                    />
+                    <label for="email_address">Email address</label>
+                </div>
+                </div>
+
+                <div class="row">
+                <div class="input-field col s12">
+                    <textarea
+                    name="message"
+                    id="message"
+                    class="materialize-textarea validate"
+                    placeholder="Tell us what you're thinking about..."
+                    ></textarea>
+                    <label for="message">Message</label>
+                </div>
+                </div>
+
+                <div class="row">
+                <div class="col s12">
+                    <button type="submit" class="btn waves-effect waves-light">
+                    Contact Us
+                    </button>
+                </div>
+                </div>
+            </form>
+            </div>
+        </div>
+    </div>
+    </main>
+
+    <!-- Shared Footer will be inserted here -->
+  <!-- Do not delete this element; it loads the site-wide footer -->
+  <div id="footer"></div>
+  <!-- JavaScript dependencies -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!-- Dynamic layout loader for navbar and footer -->
+  <!-- Do not delete this script; it injects the shared navbar and footer -->
+  <script>
+    // Load navbar from external file
+    fetch('navbar.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('navbar').innerHTML = html;
+        const elems = document.querySelectorAll('.sidenav');
+        M.Sidenav.init(elems);
+      });
+    // Load footer from external file
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('footer').innerHTML = html;
+      });
+  </script>
+</body>
+</html>
+
