@@ -1,0 +1,41 @@
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    margin: 30px 30px;
+}
+
+h3 {
+    @include flexCenter();
+}
+
+#destTitle {
+    @include flexCenter();
+    justify-content: space-evenly;
+    img {
+        max-width: 600px;
+        margin: 0;
+        padding: 20px;
+    }
+
+    #info {
+        padding: 20px;
+    }
+}
+
+#attractions {
+    @include flexCenter();
+    flex-wrap: wrap;
+    img {
+        max-width: 250px;
+        margin: 0;
+    }
+
+    #mini {
+        padding: 20px;
+    }
+}
+

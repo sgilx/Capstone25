@@ -1,0 +1,38 @@
+body {
+  margin: 30px 30px;
+}
+
+h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#destTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#destTitle img {
+  max-width: 600px;
+  margin: 0;
+  padding: 20px;
+}
+#destTitle #info {
+  padding: 20px;
+}
+
+#attractions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#attractions img {
+  max-width: 250px;
+  margin: 0;
+}
+#attractions #mini {
+  padding: 20px;
+}/*# sourceMappingURL=dest.css.map */
