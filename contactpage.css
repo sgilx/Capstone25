@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 body {
-  background-color: #1f242d;
-  color: white;
+  background-color: white;
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
@@ -14,7 +13,7 @@ body {
 }
 
 h2, label {
-  color: #ff5757;
+  color: #1565c0;
 }
 
 .center-form {
@@ -44,41 +43,21 @@ h2, label {
 .input-field textarea:focus {
   outline: none;
   box-shadow: none;
-  border-bottom: 2px solid #ff5757 !important;
+  border-bottom: 2px solid #1565c0 !important;
 }
 
 .input-field label {
-  color: #ff5757 !important;
+  color: #1565c0 !important;
   font-weight: 500;
 }
 
 .btn {
-  background-color: #ff5757;
+  background-color: #1565c0;
   border-radius: 8px;
   font-weight: bold;
   transition: background-color 0.3s ease;
 }
 
 .btn:hover {
-  background-color: #e04545;
-}
-
-footer {
-  background-color: #2a2f3a;
-  color: #ccc;
-  text-align: center;
-  padding: 30px 10%;
-  font-size: 14px;
-  margin-top: 80px;
-  border-top: 1px solid #444;
-}
-
-footer a {
-  color: #ff5757;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-footer a:hover {
-  color: white;
+  background-color: #1565c0;
 }
