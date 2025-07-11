@@ -32,18 +32,24 @@ main, h3 {
   padding: 20px;
 }
 #attractions img {
-  max-width: 300px;
+  max-width: 350px;
   margin: 0;
 }
 
 #recommend {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
   justify-content: space-evenly;
 }
 
 #related {
+  display: flex;
   justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
 }
 #related img {
-  max-width: 200px;
+  max-width: 250px;
 }/*# sourceMappingURL=dest.css.map */
