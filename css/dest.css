@@ -12,10 +12,11 @@ main, h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  justify-content: space-evenly;
 }
 #destTitle img {
-  max-width: 600px;
+  max-width: 550px;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
   margin: 0;
 }
 #destTitle #info {
@@ -34,6 +35,20 @@ main, h3 {
 #attractions img {
   max-width: 350px;
   margin: 0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  background-color: white;
+}
+#attractions img:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+#attractions h4, #attractions p, #attractions li, #attractions a, #attractions h6 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+  flex-direction: column;
 }
 
 #recommend {
