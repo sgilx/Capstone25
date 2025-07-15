@@ -1,0 +1,142 @@
+/* Layout container */
+.product-detail {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 3rem;
+  flex-wrap: nowrap;
+  margin-top: 4rem;
+  padding: 0 2rem;
+}
+
+/* Image section */
+.product-image {
+  flex: 1 1 45%;
+  text-align: center;
+}
+
+.product-image img {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Info section */
+.product-info {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 0.5rem; /* Align better with image top */
+}
+
+.product-info h3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.product-info h6 {
+  font-size: 1.1rem;
+  color: #999;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.product-info h5 {
+  font-size: 1.5rem;
+  color: #1565c0;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.product-info p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.product-info button.btn {
+  background-color: black;
+  color: white;
+  font-weight: 600;
+  border-radius: 32px;
+  padding: 0.9rem 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  transition: 0.3s all ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.product-info button.btn:hover {
+  background-color: #333;
+}
+
+.product-info .text-small {
+  font-size: 0.875rem;
+  color: #888;
+  margin-top: 0.7rem;
+}
+
+/* Long Description */
+.product-info .long-desc {
+  margin-top: 2rem;
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+  border-top: 1px solid #eee;
+  padding-top: 1.5rem;
+}
+
+/* Feature list */
+.product-info ul {
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+  list-style-type: disc;
+  color: #555;
+  line-height: 1.6;
+}
+
+.product-info ul li::marker {
+  color: #1565c0;
+}
+
+/* Responsive behavior */
+@media screen and (max-width: 768px) {
+  .product-detail {
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .product-image {
+    order: 2;
+  }
+
+  .product-info {
+    order: 1;
+    align-items: flex-start;
+    padding-top: 0;
+  }
+
+  .product-info h3 {
+    font-size: 2rem;
+  }
+
+  .product-info h5 {
+    font-size: 1.2rem;
+  }
+
+  .product-info button.btn {
+    width: 100%;
+    text-align: center;
+  }
+}

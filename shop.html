@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Shop – Globenest</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Core styles and fonts -->
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="shopstyle.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
+</head>
+
+<body style="font-family: 'Inter', sans-serif;">
+  <!-- Shared Navigation -->
+  <div id="navbar"></div>
+
+  <!-- Main Content -->
+  <main class="container" style="margin-top: 2rem;">
+    <section id="featured-product" class="featured-product"></section>
+
+    <h5 class="section-title">Other Products</h5>
+    <div id="shop-items" class="row"></div>
+  </main>
+
+  <!-- Shared Footer -->
+  <div id="footer"></div>
+
+  <!-- JS Dependencies -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <!-- Load Navbar, Footer, and Shop Items -->
+  <script>
+    fetch('navbar.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('navbar').innerHTML = html;
+        M.Sidenav.init(document.querySelectorAll('.sidenav'));
+      });
+
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('footer').innerHTML = html;
+      });
+
+    fetch('products.json')
+      .then(res => res.json())
+      .then(products => {
+        const featured = products[0];
+        const featuredHTML = `
+          <a href="product.html?id=0" style="text-decoration: none; color: inherit;">
+            <div class="featured-layout">
+              <div class="featured-image">
+                <img src="${featured.image}" alt="${featured.name}" onerror="this.onerror=null; this.src='./imgs/fallback.jpg';">
+                </div>
+                <div class="featured-info">
+                  <h4>${featured.name}</h4>
+                  <h6 class="grey-text">Top Pick</h6>
+                  <h5 class="blue-text text-darken-2">$${featured.price.toFixed(2)}</h5>
+                  <p>${featured.desc}</p>
+                  <a class="btn black">Add to cart</a>
+                  <p class="grey-text text-small" style="margin-top: 1rem; font-size: 0.9rem;">Limited stock available.</p>
+                  </div>
+                  </div>
+                  </a>
+                  `;
+        document.getElementById('featured-product').innerHTML = featuredHTML;
+
+        const container = document.getElementById('shop-items');
+        products.slice(1).forEach((product, i) => {
+          const productId = i + 1;
+          const col = document.createElement('div');
+          col.className = 'col s12 m6 l4';
+          col.innerHTML = `
+            <a href="product.html?id=${productId}" style="text-decoration: none; color: inherit;">
+              <div class="card shop-card">
+                <div class="card-image">
+                  <img src="${product.image}" alt="${product.name}" onerror="this.onerror=null; this.src='./imgs/fallback.jpg';">
+                </div>
+                <div class="card-content">
+                  <span class="card-title">${product.name}</span>
+                  <p>${product.desc}</p>
+                </div>
+                <div class="card-action">
+                  <span class="price-tag">$${product.price.toFixed(2)}</span>
+                </div>
+              </div>
+            </a>
+          `;
+          container.appendChild(col);
+        });
+      })
+      .catch(err => {
+        document.getElementById('shop-items').innerHTML = '<p>Unable to load products. Please try again later.</p>';
+        console.error('Error loading products.json:', err);
+      });
+  </script>
+</body>
+</html>

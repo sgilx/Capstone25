@@ -1,0 +1,88 @@
+<!-- product.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Product – Globenest</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="productstyle.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
+</head>
+
+<body style="font-family: 'Inter', sans-serif;">
+  <div id="navbar"></div>
+
+  <main class="container" style="margin-top: 2rem;">
+    <section id="product-detail" class="product-detail"></section>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <script>
+    fetch('navbar.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('navbar').innerHTML = html;
+        M.Sidenav.init(document.querySelectorAll('.sidenav'));
+      });
+
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('footer').innerHTML = html;
+      });
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = parseInt(urlParams.get('id')) || 0;
+
+    fetch('products.json')
+  .then(res => res.json())
+  .then(products => {
+    const product = products[productId] || products[0];
+    const imageSrc = product.image || './imgs/fallback.jpg';
+
+    const longDescHTML = product.longDesc
+      ? `<p style="margin-top: 1.5rem;">${product.longDesc}</p>`
+      : '';
+
+    const featuresHTML = product.features?.length
+      ? `<h6 style="margin-top: 1.5rem;">Features:</h6><ul class="browser-default">${product.features.map(f => `<li>${f}</li>`).join('')}</ul>`
+      : '';
+
+    const html = `
+      <div class="product-detail">
+        <div class="product-info">
+          <h3>${product.name}</h3>
+          <h6 class="grey-text">Travel Essential</h6>
+          <h5 class="blue-text text-darken-2">$${product.price.toFixed(2)}</h5>
+          <p>${product.desc}</p>
+          <button class="btn black">Add to Cart</button>
+          <p class="grey-text text-small" style="margin-top: 1rem;">Shipping & return policy available</p>
+
+          ${longDescHTML}
+          ${featuresHTML}
+        </div>
+        <div class="product-image">
+          <img src="${imageSrc}" alt="${product.name}" onerror="this.onerror=null; this.src='./imgs/fallback.jpg';">
+        </div>
+      </div>
+    `;
+
+    document.getElementById('product-detail').innerHTML = html;
+  })
+  .catch(err => {
+    document.getElementById('product-detail').innerHTML = '<p>Unable to load product.</p>';
+    console.error('Error loading product:', err);
+  });
+
+  </script>
+</body>
+</html>
