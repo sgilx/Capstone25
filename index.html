@@ -7,7 +7,7 @@
 
   <!-- Dependencies -->
   <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="image.css" />
+  <link rel="stylesheet" href="css/indexstyle.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet" />
   <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
@@ -23,36 +23,36 @@
       <div class="slider">
         <ul class="slides ">
                     <li>
-            <img src="Women.jpg">
+            <img src="images/Women.jpg">
             <div class="caption center-align ">
               <h3>Check out must-have travel gear</h3>
               <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-             <a href="#shop" class="btn-large white black-text z-depth-1 hoverable"">Shop</a>
+             <a href="shop.html" class="btn-large white black-text z-depth-1 hoverable"">Shop</a>
             </div>
           </li>
           <li>
-            <img src="Singapore.jpg">
+            <img src="images/Singapore.jpg">
             <div class="caption center-align">
               <h3>Explore Singapore</h3>
               <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-              <a href="#destination1" class="btn-large white black-text z-depth-1 hoverable">Singapore</a>
+              <a href="destOne.html" class="btn-large white black-text z-depth-1 hoverable">Singapore</a>
             </div>
           </li>
 
           <li>
-            <img src="NYC.jpg">
+            <img src="images/NYC2.jpg">
             <div class="caption center-align">
               <h3>Check out New York City</h3>
               <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-              <a href="#destination2" class="btn-large white black-text z-depth-1 hoverable">New York City</a>
+              <a href="destTwo.html" class="btn-large white black-text z-depth-1 hoverable">New York City</a>
             </div>
           </li>
           <li>
-            <img src="Share.jpg">
+            <img src="images/Share.jpg">
             <div class="caption center-align">
               <h3>Share your Experience</h3>
               <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-              <a href="#contact" class="btn-large white black-text z-depth-1 hoverable">Contact</a>
+              <a href="contactpage.html" class="btn-large white black-text z-depth-1 hoverable">Contact</a>
             </div>
           </li>
         </ul>
@@ -72,13 +72,13 @@
   <!-- First Row: Text on Right, Image on Left -->
   <div class="row valign-wrapper">
     <div class="col s12 m6">
-      <img src="Singapore1.jpg" alt="Beach" class="responsive-img same-size-img">
+      <img src="images/Singapore1.jpg" alt="Beach" class="responsive-img same-size-img">
     </div>
     <div class="col s12 m6">
       <p>
         Singapore is a small island city-state in Southeast Asia known for its cleanliness, safety, modern skyline, and cultural diversity. It blends Chinese, Malay, Indian, and Western influences, offering a rich mix of traditions, food, and attractions — all in a highly efficient, tech-forward setting.
       </p>
-    <a href="destination1" class="btn waves-effect waves-light">See more</a>
+      <a href="destOne.html" class="btn">See more</a>
     </div>
   </div>
 
@@ -88,10 +88,10 @@
       <p>
        New York City (NYC) is the largest city in the U.S., known for its diversity, skyscrapers, theater, and nonstop energy. It's made up of five boroughs — most tourists focus on Manhattan, but don’t miss Brooklyn and Queens if you have time.
       </p>
-    <a href="destination2" class="btn waves-effect waves-light">See more</a>
+    <a href="destTwo.html" class="btn waves-effect waves-light">See more</a>
     </div>
     <div class="col s12 m6">
-      <img src="NewYork1.jpg" alt="Coffee" class="responsive-img same-size-img">
+      <img src="images/NewYork1.jpg" alt="Coffee" class="responsive-img same-size-img">
     </div>
     <div class="right-align"></div>
   </div>
@@ -154,12 +154,23 @@
 
       // Load navbar
       fetch('navbar.html')
-        .then(res => res.text())
-        .then(html => {
-          document.getElementById('navbar').innerHTML = html;
-          const elems = document.querySelectorAll('.sidenav');
-          M.Sidenav.init(elems);
-        });
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById('navbar').innerHTML = html;
+
+    // Re-initialize Materialize components *after* navbar is injected
+    M.Sidenav.init(document.querySelectorAll('.sidenav'));
+
+    const dropdowns = document.querySelectorAll('.dropdown-trigger');
+    M.Dropdown.init(dropdowns, {
+      coverTrigger: false,
+      constrainWidth: false
+    });
+
+    const collapsibles = document.querySelectorAll('.collapsible');
+    M.Collapsible.init(collapsibles);
+  });
+
 
       // Load footer
       fetch('footer.html')

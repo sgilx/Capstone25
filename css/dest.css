@@ -12,6 +12,21 @@ div {
   margin-bottom: 10px;
 }
 
+/* Button styling update for theme consistency */
+a.btn-small,
+.waves-effect.waves-light.btn-small {
+  background-color: #1565c0 !important;
+  color: white !important;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+a.btn-small:hover {
+  background-color: #fdd835 !important;
+  color: #1a1a1a !important;
+}
+
 #destTitle {
   display: flex;
   justify-content: center;
@@ -93,4 +108,4 @@ div {
   #destTitle img, #recommend img, h3 img {
     max-width: 100%;
   }
-}/*# sourceMappingURL=dest.css.map */
+}
