@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Travel Backpack",
+    "desc": "Durable and spacious, perfect for week-long adventures.",
+    "price": 89.99,
+    "image": "./images/manback.jpg",
+    "longDesc": "This backpack is designed for travelers who need both comfort and storage. With multiple compartments and padded straps, it’s perfect for day trips or extended journeys.",
+    "features": [
+      "Water-resistant material",
+      "Laptop compartment up to 17\"",
+      "Breathable back panel"
+    ]
+  },
+  {
+    "name": "Packing Cubes Set",
+    "desc": "Organize your luggage with ease using this 6-piece compression set.",
+    "price": 29.99,
+    "image": "./images/Pack.jpg",
+    "longDesc": "This packing cube set helps you optimize space and stay organized while traveling. Ideal for carry-ons and long trips alike, the cubes are made of durable fabric and see-through mesh so you can quickly find what you need.",
+    "features": [
+      "Durable nylon with breathable mesh panels",
+      "Smooth double zippers for easy access",
+      "Varied sizes for clothes, toiletries, and accessories"
+    ]
+  },
+  {
+    "name": "Universal Travel Adapter",
+    "desc": "Worldwide compatibility with built-in USB ports and surge protection.",
+    "price": 21.50,
+    "image": "./images/Adapter.jpg",
+    "longDesc": "A must-have for international travel, this adapter supports plugs in over 150 countries and includes built-in USB ports for charging multiple devices.",
+    "features": [
+      "Works in 150+ countries",
+      "2 USB ports and surge protection",
+      "Compact and lightweight"
+    ]
+  },
+  {
+    "name": "Neck Pillow & Eye Mask Set",
+    "desc": "Memory foam neck pillow and light-blocking eye mask for long flights.",
+    "price": 18.00,
+    "image": "./images/Neck.jpg",
+    "longDesc": "Enjoy restful sleep during long journeys with this supportive neck pillow and ultra-soft eye mask combo. Designed for portability and comfort.",
+    "features": [
+      "Ergonomic memory foam support",
+      "Soft-touch velour cover",
+      "Adjustable eye mask included"
+    ]
+  },
+  {
+    "name": "Refillable Toiletry Bottles",
+    "desc": "4-pack of TSA-approved leak-proof silicone travel bottles.",
+    "price": 12.75,
+    "image": "./images/Bottle.jpg",
+    "longDesc": "Carry your shampoo, lotion, or sanitizer with ease. These leak-proof silicone bottles are TSA-compliant and reusable for all types of liquids.",
+    "features": [
+      "Leak-proof and BPA-free silicone",
+      "TSA carry-on size approved",
+      "Color-coded for easy identification"
+    ]
+  },
+  {
+    "name": "Waterproof Travel Pouch",
+    "desc": "Secure passport, cash, and valuables while exploring new cities.",
+    "price": 14.99,
+    "image": "./images/Pouch.jpg",
+    "longDesc": "This lightweight travel pouch keeps your essentials safe and accessible. Ideal for sightseeing, day trips, or storing your phone and documents.",
+    "features": [
+      "Water-resistant zipper enclosure",
+      "Multiple inner pockets",
+      "Slim and discreet design"
+    ]
+  },
+  {
+    "name": "NYC Subway Map Hoodie",
+    "desc": "Stylish and cozy hoodie printed with the iconic NYC subway map — a hit with tourists and locals alike.",
+    "price": 49.99,
+    "image": "./images/NYC.jpg",
+    "longDesc": "Show your NYC pride with this bold and graphic hoodie. The subway map print is not just stylish — it’s also surprisingly helpful.",
+    "features": [
+      "Soft cotton-blend fabric",
+      "Subway map print front & back",
+      "Unisex sizing"
+    ]
+  },
+  {
+    "name": "Singapore EZ-Link Tourist Card",
+    "desc": "Preloaded transit card for Singapore's MRT, LRT, and buses. Easy and essential for navigating the city.",
+    "price": 22.00,
+    "image": "./images/cards.jpg",
+    "longDesc": "Simplify your travel in Singapore with this reloadable EZ-Link card, accepted on all public transportation. A perfect companion for first-time visitors.",
+    "features": [
+      "Accepted on MRT, LRT, and buses",
+      "Preloaded credit",
+      "Rechargeable and reusable"
+    ]
+  },
+  {
+    "name": "World City Postcard Set",
+    "desc": "A premium 10-piece postcard collection featuring scenes from both NYC and Singapore. Great for souvenirs or journaling.",
+    "price": 11.95,
+    "image": "./images/World.jpg",
+    "longDesc": "This beautifully printed postcard set captures urban landscapes, culture, and charm of two iconic cities. Ideal for sending home or collecting.",
+    "features": [
+      "10 full-color postcards",
+      "Thick, writable card stock",
+      "City landmarks and skyline artwork"
+    ]
+  },
+  {
+    "name": "More Items Coming Soon",
+    "desc": "Check back later for exciting new travel gear.",
+    "price": 0.00,
+    "image": "./imgs/placeholder.jpg",
+    "longDesc": "We're working on adding new products to our shop. Stay tuned!",
+    "features": [
+      "Coming soon...",
+      "More destinations",
+      "More travel accessories"
+    ]
+  }
+]
