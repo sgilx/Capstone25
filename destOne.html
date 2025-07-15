@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Shop – Globenest</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Dependencies -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./css/dest.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
+</head>
+<body>
+    <!-- Shared Navbar -->
+    <div id="navbar"></div>
+    <!-- Main Content -->
+    <main class="container" style="margin-top: 2rem; margin-bottom: 2rem;">
+    <div id="destTitle">
+        <section id="info">
+            <h2>SINGAPORE</h2>
+            <p>Whether you're looking for a fun new experience, exploring other culture, perhaps
+                you came across this by chance— let Singapore speak to you!
+            </p>
+        </section>
+        <img src="./imgs/singapore.jpg" class="z-depth-1">
+    </div>
+
+    <h3>There is something for everyone</h3>
+
+    <div id="attractions">
+    <!--Tourism section-->
+        <section id="mini">
+            <a class="modal-trigger" href="#modal-tourist">
+                <img src="./imgs/gardensByBay.jpg">
+            </a>
+            <h6>Tourist Attractions</h6>
+            <p>Explore the most popular attractions!</p>
+        </section>
+        <div class="modal-content">
+                <div id="modal-tourist" class="modal">
+                <h4>Tourist Attractions</h4>
+                <p>There are a multitude of options for any visitors!
+                    From the iconic Gardens by the Bay to the Signapore Zoo! 
+                    Here are our recommendations:
+                    <ul>
+                        <li>Gardens by the Bay — beautiful park with stunning architecture</li>
+                        <li>Universal Studios Singapore — amusement park offering unique rides and experiences</li>
+                        <li>Signapore Zoo — visit the beautiful zoo with diverse animals</li>
+                        <li>Merlion Park — home of the iconic Merlion statue which has rich symbolism—
+                             commemorating Singapore's fish village origins</li>
+                    </ul>
+                    <a class="waves-effect waves-light blue darken-3 btn-small"> Book Now!</a>
+                </p>
+            </div>
+        </div>
+
+    <!--Eats section-->
+        <section id="mini">
+            <a class="modal-trigger" href="#modal-eats">
+                <img src="./imgs/cTownComplex.jpg">
+            </a>
+            <h6>Good Eats</h6>
+            <p>Savor both local and global cuisines</p>
+        </section>
+        <div id="modal-eats" class="modal">
+            <div class="modal-content">
+                <p>Singapore is a food lover's paradise, with options from hawker stalls to restaurants. Here are our picks:
+                <ul>
+                    <li>Maxwell Food Centre — very popular for Hainanese chicken rice and many other dishes</li>
+                    <li>Chinatown Complex — huge variety of budget-friendly local eats</li>
+                    <li>Lau Pa Sat — historic food market known for satay, a marinated grilled meat with a peanut-based dipping sauce</li>
+                    <li>Jumbo Seafood — if you enjoy seafood of course, it's famous for chili and black pepper crab</li>
+                </ul>
+                <a class="waves-effect waves-light blue darken-3 btn-small"> Book Now!</a>
+                </p>
+            </div>
+        </div>
+
+    <!--Culture section-->
+        <section id="mini">
+            <a class="modal-trigger" href="#modal-culture">
+                <img src="./imgs/natGallSing.jpg">
+            </a>
+            <h6>Cultural Activities</h6>
+            <p>Dive into Singaporean culture</p>
+        </section>
+        <div id="modal-culture" class="modal">
+            <div class="modal-content">
+                <h4>Cultural Activities</h4>
+                <p>Explore Singapore's rich cultural mix through these unique experiences:
+                    <ul>
+                        <li>National Gallery — wonderful gallery that showcases Southeast Asian art in many forms</li>
+                        <li>Little India — a colorful area with temples for beautiful views and spice shops</li>
+                        <li>Chinatown Heritage Centre — offering a glimpse into early migrant life and its rich history</li>
+                        <li>Kampong Glam — a Malay heritage district with mosques, markets, and more</li>
+                    </ul>
+                <a class="waves-effect waves-light blue darken-3 btn-small"> Book Now!</a>
+                </p>
+            </div>
+        </div>
+
+    <!--Hotel section-->
+        <section id="mini">
+            <a class="modal-trigger" href="#modal-hotel">
+                <img src="./imgs/hotelSingapore.jpg">
+            </a>
+            <h6>Hotels</h6>
+            <p>Affordable and great places to stay</p>
+        </section>
+        <div id="modal-hotel" class="modal">
+            <div class="modal-content">
+                <h4>Hotels</h4>
+                <p>Comfortable and budget-friendly options for your stay:
+                    <ul>
+                        <li>Hotel G — a stylish hotel, centrally located for the easiest access to popular spots</li>
+                        <li>Hotel Boss — offers a great value with amenities and a pool for relaxation</li>
+                        <li>lyf Funan — a trendy co-living hotel above a mall, perfect for exploring and a bit of shopping</li>
+                        <li>Champion Hotel — a cozy spot in heritage-rich Joo Chiat, giving you an opportunity to learn and enjoy</li>
+                    </ul>
+                    <a class="waves-effect waves-light blue darken-3 btn-small"> Book Now!</a>
+                </p>
+            </div>
+        </div>
+
+    <!--Transportation section-->
+        <section id="mini">
+            <a class="modal-trigger" href="#modal-transport">
+                <img src="./imgs/transportMRT.jpg">
+            </a>
+            <h6>Transportation</h6>
+            <p>Save money and go public</p>
+        </section>
+        <div id="modal-transport" class="modal">
+            <div class="modal-content">
+                <h4>Transportation</h4>
+                <p>Getting around is easy with Singapore's efficient transport system:
+                    <ul>
+                        <li>MRT — Mass Rapid Transport System, clean and reliable train network</li>
+                        <li>EZ-Link Card — tap-and-go card for trains and buses</li>
+                        <li>Tourist Pass — offers unlimited rides for a fixed price durring your stay</li>
+                        <li>Public Buses — offers afforadable air-conditioned buses with wide coverage</li>
+                    </ul>
+                    <a class="waves-effect waves-light blue darken-3 btn-small"> Book Now!</a>
+                </p>
+            </div>
+        </div>
+
+    <!--Traveler section-->
+        <section id="mini">
+            <a class="modal-trigger" href="#modal-traveler">
+                <img src="./imgs/marinaBaySands.jpg">
+            </a>
+                <h6>Traveler Favorites</h6>
+                <p>Traveler popular activities</p>
+        </section>
+        <div id="modal-traveler" class="modal">
+            <div class="modal-content">
+                <h4>Traveler Favorites</h4>
+                <p>Top spots that visitors keep coming back to:
+                    <ul>
+                        <li>Marina Bay Sands — offers sweeping views of the marvelous skyline, as seen in popular films</li>
+                        <li>Sentosa Island — beautiful beaches, theme parks, and attractions for anyone to enjoy</li>
+                        <li>Singapore Flyer — a giant observation wheel with city views</li>
+                        <li>Haji Lane — narrow street with little shops, murals, and more</li>
+                    </ul>
+                    <a class="waves-effect waves-light blue darken-3 btn-small"> Book Now!</a>
+                </p>
+            </div>
+        </div>
+
+
+<!-- Other recommended locations to visit -->
+    <div id="recommend">
+        <section id="related">
+            <section id="loc">
+                <a href="https://www.gotokyo.org/en/index.html"><img src="./imgs/tokyo.jpg" class="z-depth-1"></a>
+                <h6>Tokyo, Japan</h6>
+            </section>
+            <section id="loc">
+                <a href="https://english.visitseoul.net/index"><img src="./imgs/seoul.jpg" class="z-depth-1"></a>
+                <h6>Seoul, South Korea</h6>
+            </section>
+            <section id="loc">
+                <a href="https://www.tourismthailand.org/Destinations/Provinces/Bangkok/219"><img src="./imgs/bangkok.jpg" class="z-depth-1"></a>
+                <h6>Bangkok, Thailand</h6>
+            </section>
+            <section id="loc">
+                <a href="https://bali.com/"><img src="./imgs/bali.jpg" class="z-depth-1"></a>
+                <h6>Bali, Indonesia</h6>
+            </section>
+        </section>
+        <section id="info">
+            <h2>Want to Explore again?</h2>
+            <p>Travelers that enjoyed Signapore have also enjoyed these locations!</p>
+        </section>
+    </div>
+</main>
+    <!-- Shared Footer -->
+    <div id="footer"></div>
+    <!-- Scripts -->
+     <script src="./js/dest.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+      fetch('navbar.html')
+        .then(res => res.text())
+        .then(html => {
+          document.getElementById('navbar').innerHTML = html;
+          const elems = document.querySelectorAll('.sidenav');
+          M.Sidenav.init(elems);
+        });
+      fetch('footer.html')
+        .then(res => res.text())
+        .then(html => {
+          document.getElementById('footer').innerHTML = html;
+        });
+    </script>
+</body>
+</html>
