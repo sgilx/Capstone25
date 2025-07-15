@@ -1,0 +1,96 @@
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    margin: 30px 30px;
+}
+
+main, h3 {
+    @include flexCenter();
+}
+
+div {
+    margin-bottom: 10px;
+}
+
+#destTitle {
+    @include flexCenter();
+    img {
+        max-width: 550px;
+        object-fit: scale-down;
+        margin: 0;
+    }
+
+    #info {
+        padding: 20px;
+    }
+}
+
+#attractions {
+    @include flexCenter();
+    flex-wrap: wrap;
+
+    #mini {
+        padding: 20px;
+    }
+
+    img {
+        width: 100%;
+        max-width: 300px;
+        height: 200px;
+        object-fit: cover;
+        object-position: center;
+        // margin: 0;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+        &:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+    }
+
+    h4, p, li, a, h6 {
+        @include flexCenter();
+        margin: 15px;
+        flex-direction: column;
+    }
+}
+#recommend {
+    @include flexCenter();
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#related {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    img {
+        max-width: 250px;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    #destTitle, #recommend, h3 {
+        // flex-direction: column;
+        flex-wrap: wrap;
+        img {
+            max-width: 100%;
+        }
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    #destTitle, #recommend, h3 {
+        flex-direction: column;
+        flex-wrap: wrap;
+        img {
+            max-width: 100%;
+        }
+    }
+}

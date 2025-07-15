@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Shop – Globenest</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Dependencies -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./css/dest.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
+</head>
+<body>
+    <!-- Shared Navbar -->
+    <div id="navbar"></div>
+    <!-- Main Content -->
+    <main class="container" style="margin-top: 2rem; margin-bottom: 2rem;">
+    <div id="destTitle">
+        <section id="info">
+            <h2>New York City</h2>
+            <p>The Big Apple. Known for its bustling city environment, has much to choose from.
+                From popular tourist locations the Empire State Building, One World Trade Center, 
+                or a walk simple through Central Park— let New York speak to you!
+            </p>
+        </section>
+        <img src="./imgs/nyc.jpg" class="z-depth-1">
+    </div>
+
+    <h3>There is something for everyone</h3>
+
+    <div id="attractions">
+    <!--Tourism section-->
+        <section id="mini">
+            <a class="modal-trigger" href="#modal-tourist">
+                <img src="./imgs/statue.jpg">
+            </a>
+            <h6>Tourist Attractions</h6>
+            <p>Explore the most popular attractions!</p>
+        </section>
+        <div class="modal-content">
+                <div id="modal-tourist" class="modal">
+                <h4>Tourist Attractions</h4>
+                <p>NYC is packed with world-famous landmarks and must-see spots. 
+                    Here are our recommendations:
+                    <ul>
+                        <li>Statue of Liberty — arguably the most iconic symbol of freedom on Liberty Island, though technically in New Jersey...</li>
+                        <li>Central Park — the iconic large urban park perfect for walks, picnics, and people-watching</li>
+                        <li>Empire State Building — the classic skyscraper with panoramic city views, also gives a wonderful view of Central Park</li>
+                        <li>Times Square — offering the most bustling vibes, bright lights, theaters, entertainment and more</li>
+                    </ul>
+                    <a class="waves-effect waves-light blue darken-3 btn-small"> Book Now!</a>
+                </p>
+            </div>
+        </div>
+
+    <!--Eats section-->
+        <section id="mini">
+            <a class="modal-trigger" href="#modal-eats">
+                <img src="./imgs/joes.jpg">
+            </a>
+            <h6>Good Eats</h6>
+            <p>Savor both local and global cuisines</p>
+        </section>
+        <div id="modal-eats" class="modal">
+            <div class="modal-content">
+                <h4>Good Eats</h4>
+                <p>New York is a global food capital, offering everything from street eats to fine dining:
+                <ul>
+                    <li>Katz's Delicatessen  — a legendary spot for pastrami sandwiches and other deli</li>
+                    <li>Joe's Pizza — offering classic New York style pizza by the slice for a bargain</li>
+                    <li>Friedmans — with locations all over, the family run restaurant offfers delicious eats — all gluten-free</li>
+                    <li>Levain Bakery — bakery famous for a multitude of pastries such as their thick and gooey cookies</li>
+                </ul>
+                <a class="waves-effect waves-light blue darken-3 btn-small"> Book Now!</a>
+                </p>
+            </div>
+        </div>
+
+    <!--Culture section-->
+        <section id="mini">
+            <a class="modal-trigger" href="#modal-culture">
+                <img src="./imgs/9:11.jpg">
+            </a>
+            <h6>Cultural Activities</h6>
+            <p>Dive into New York's rich culture</p>
+        </section>
+        <div id="modal-culture" class="modal">
+            <div class="modal-content">
+                <h4>Cultural Activities</h4>
+                <p>Dive into NYC's rich history and arts scene with these cultural picks:
+                    <ul>
+                        <li> 9/11 Memorial & Museum — explore the immersive and poowerful tribute museum and reflective pool memorial,
+                             honoring victims of 9/11</li>
+                        <li>The MET — the iconic Metropolitan Museum of Art, offering unique glimpses into the minds of artists</li>
+                        <li>Broadway — the world-renowned theater district with top shows and memorable experiences</li>
+                        <li>MoMA — moderm art museum showcasing wonderful works, such as that of Picasso and more</li>
+                    </ul>
+                <a class="waves-effect waves-light blue darken-3 btn-small"> Book Now!</a>
+                </p>
+            </div>
+        </div>
+
+    <!--Hotel section-->
+        <section id="mini">
+            <a class="modal-trigger" href="#modal-hotel">
+                <img src="./imgs/hotelnyc.jpg">
+            </a>
+            <h6>Hotels</h6>
+            <p>Affordable and great places to stay</p>
+        </section>
+        <div id="modal-hotel" class="modal">
+            <div class="modal-content">
+                <h4>Hotels</h4>
+                <p>Stay comfortable without breaking the bank and near attractions at these well-rated spots:
+                    <ul>
+                        <li>Pod 39 — offering compact rooms with modern style near Grand Central</li>
+                        <li>Moxy NYC Times Square — a trendy hotel with rooftop bar and proximity to Times Square</li>
+                        <li>citizenM Bowery — an artsy hotel with smart rooms and great views for anyone</li>
+                        <li>The Jane Hotel — a historic, budget-friendly option in the West Village</li>
+                    </ul>
+                    <a class="waves-effect waves-light blue darken-3 btn-small"> Book Now!</a>
+                </p>
+            </div>
+        </div>
+
+    <!--Transportation section-->
+        <section id="mini">
+            <a class="modal-trigger" href="#modal-transport">
+                <img src="./imgs/subway.jpg">
+            </a>
+            <h6>Transportation</h6>
+            <p>Save money and go public</p>
+        </section>
+        <div id="modal-transport" class="modal">
+            <div class="modal-content">
+                <h4>Transportation</h4>
+                <p>New York's public transit makes it almost too easy to see all there is to see. 
+                    Here are some of our recommendations:
+                    <ul>
+                        <li>Subway - it's fast, afforadble and connects all boroughs using metrocards is fun,
+                            but after the first few tap-to-pay's your remaining rides are free</li>
+                        <li>Buses — reliable and easy to navigate, very convenient when consistently traveling
+                            within certain areas, free tap applies here too</li>
+                        <li>Citi Bike — a bike-share system for shorter rides that you can take across the city</li>
+                        <li>Walking — as crazy as it may sound, many things are a walkable distance when you use your map properly</li>
+                    </ul>
+                    <a class="waves-effect waves-light blue darken-3 btn-small"> Book Now!</a>
+                </p>
+            </div>
+        </div>
+
+        <!--Traveler section-->
+        <section id="mini">
+            <a class="modal-trigger" href="#modal-traveler">
+                <img src="./imgs/grandcentral.jpg">
+            </a>
+                <h6>Traveler Favorites</h6>
+                <p>Traveler popular activities</p>
+        </section>
+        <div id="modal-traveler" class="modal">
+            <div class="modal-content">
+                <h4>Traveler Favorites</h4>
+                <p>Spots in NYC that visitors say you shouldn't skip out on:
+                    <ul>
+                        <li>Brooklyn Bridge — beautiful bridge that connects the boroughs in NYC to those in Brooklyn, amazing views walking or biking </li>
+                        <li>5th Avenue — popular shopping street, offering a multitude of shops and experiences</li>
+                        <li>Grand Central Terminal — the most iconic subway station, known for its size and all the little surprises inside(shops and restaurants)</li>
+                        <li>The High Line — an elevated park build on a former New York Central Railroad</li>
+                    </ul>
+                    <a class="waves-effect waves-light blue darken-3 btn-small"> Book Now!</a>
+                </p>
+            </div>
+        </div>
+
+
+<!-- Other recommended locations to visit -->
+    <div id="recommend">
+        <section id="related">
+            <section id="loc">
+                <a href="https://www.choosechicago.com/articles/bucket-list/first-time-visitors-guide-to-chicago/"><img src="./imgs/chicago.jpg" class="z-depth-1"></a> 
+                <h6>Chicago, Illinois</h6>
+            </section>
+            <section id="loc">
+                <a href="https://www.discoverlosangeles.com/"><img src="./imgs/la.jpg" class="z-depth-1"></a>
+                <h6>Los Angeles, California</h6>
+            </section>
+            <section id="loc">
+                <a href="https://www.meetboston.com/"><img src="./imgs/boston.jpg" class="z-depth-1"></a>
+                <h6>Boston, Massachusetts</h6>
+            </section>
+            <section id="loc">
+                <a href="https://www.neworleans.com/"><img src="./imgs/nola.jpg" class="z-depth-1"></a>
+                <h6>New Orleans, Lousiana</h6>
+            </section>
+        </section>
+        <section id="info">
+            <h2>Want to Explore again?</h2>
+            <p>Travelers that enjoyed Signapore have also enjoyed these locations!</p>
+        </section>
+    </div>
+</main>
+    <!-- Shared Footer -->
+    <div id="footer"></div>
+    <!-- Scripts -->
+     <script src="./js/dest.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+      fetch('navbar.html')
+        .then(res => res.text())
+        .then(html => {
+          document.getElementById('navbar').innerHTML = html;
+          const elems = document.querySelectorAll('.sidenav');
+          M.Sidenav.init(elems);
+        });
+      fetch('footer.html')
+        .then(res => res.text())
+        .then(html => {
+          document.getElementById('footer').innerHTML = html;
+        });
+    </script>
+</body>
+</html>

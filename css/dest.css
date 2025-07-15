@@ -1,0 +1,96 @@
+body {
+  margin: 30px 30px;
+}
+
+main, h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div {
+  margin-bottom: 10px;
+}
+
+#destTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#destTitle img {
+  max-width: 550px;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+  margin: 0;
+}
+#destTitle #info {
+  padding: 20px;
+}
+
+#attractions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#attractions #mini {
+  padding: 20px;
+}
+#attractions img {
+  width: 100%;
+  max-width: 300px;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+#attractions img:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+#attractions h4, #attractions p, #attractions li, #attractions a, #attractions h6 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+  flex-direction: column;
+}
+
+#recommend {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#related {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#related img {
+  max-width: 250px;
+}
+
+@media only screen and (max-width: 768px) {
+  #destTitle, #recommend, h3 {
+    flex-wrap: wrap;
+  }
+  #destTitle img, #recommend img, h3 img {
+    max-width: 100%;
+  }
+}
+@media only screen and (max-width: 420px) {
+  #destTitle, #recommend, h3 {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  #destTitle img, #recommend img, h3 img {
+    max-width: 100%;
+  }
+}/*# sourceMappingURL=dest.css.map */
