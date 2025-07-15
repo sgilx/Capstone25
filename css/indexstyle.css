@@ -59,10 +59,10 @@ p {
 }
 
 /* Typography Example */
-h3, span {
+/* h3, span {
   font-family: 'Courier New', Courier, monospace;
   font-size: 10px;
-}
+} */
 
 /* Responsive Styles */
 @media screen and (max-width: 1200px) {
@@ -95,4 +95,18 @@ h3, span {
   height: 300px; /* or whatever height you want */
   object-fit: cover;
   border-radius: 8px;
+}
+
+/* Blue primary buttons */
+.btn, .btn-large {
+  background-color: #1565c0 !important;
+  color: white !important;
+  font-weight: 600;
+  border-radius: 6px;
+}
+
+/* Yellow hover effect */
+.btn:hover, .btn-large:hover {
+  background-color: #fdd835 !important;
+  color: #1a1a1a !important;
 }

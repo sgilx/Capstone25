@@ -30,7 +30,7 @@ nav {
 
 .brand-logo iconify-icon {
   font-size: 26px;
-  color: #1565c0;
+  color: #0014ee; /* Updated brand color */
 }
 
 .nav-links a {
@@ -42,9 +42,20 @@ nav {
 }
 
 .nav-links a:hover {
-  color: #1565c0;
+  color: #0014ee; /* Updated hover color */
   background-color: transparent;
 }
+
+.dropdown-content li > a {
+  color: #1565c0 !important; /* Blue text */
+  font-weight: 600;
+}
+
+.dropdown-content li > a:hover {
+  background-color: #fdd835 !important; /* Yellow hover */
+  color: #1a1a1a !important;
+}
+
 
 /* ===== SIDENAV STYLES ===== */
 .sidenav {
@@ -52,7 +63,7 @@ nav {
 }
 
 .sidenav a {
-  color: #1565c0;
+  color: #0014ee; /* Updated color */
   font-weight: 600;
   font-size: 1.15rem;
 }
@@ -68,7 +79,7 @@ nav {
   font-size: 1.2rem;
   margin-left: 16px;
   margin-bottom: 16px;
-  color: #1565c0;
+  color: #0014ee; /* Updated logo color */
 }
 
 .sidenav-trigger {
@@ -86,7 +97,7 @@ nav {
 
 /* ===== FOOTER ===== */
 footer a:hover iconify-icon {
-  color: #1565c0;
+  color: #0014ee; /* Updated hover effect */
   transition: color 0.2s ease;
 }
 

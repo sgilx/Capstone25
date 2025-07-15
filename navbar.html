@@ -9,23 +9,50 @@
       <iconify-icon icon="mdi:menu" width="26"></iconify-icon>
     </a>
     <ul class="right hide-on-med-and-down nav-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Destination</a></li>
-      <li><a href="#">Shop</a></li>
-      <li><a href="#">Contact</a></li>
-      <li><a href="#">About</a></li>
+      <li><a href="index.html">Home</a></li>
+      
+      <!-- Dropdown Trigger -->
+      <li>
+        <a class="dropdown-trigger" href="#!" data-target="destination-dropdown">
+          Destination <iconify-icon icon="mdi:chevron-down" width="16"></iconify-icon>
+        </a>
+      </li>
+
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="contactpage.html">Contact</a></li>
     </ul>
   </div>
 </nav>
 
+<!-- Dropdown Content (Desktop) -->
+<ul id="destination-dropdown" class="dropdown-content">
+  <li><a href="destOne.html">Singapore</a></li>
+  <li><a href="destTwo.html">New York City</a></li>
+</ul>
+
+<!-- Mobile Nav -->
 <ul class="sidenav" id="mobile-nav">
   <li class="logo-mobile">
     <iconify-icon icon="mdi:earth" width="20"></iconify-icon>
     Globenest
   </li>
-  <li><a href="#">Home</a></li>
-  <li><a href="#">Destination</a></li>
-  <li><a href="#">Shop</a></li>
-  <li><a href="#">Contact</a></li>
-  <li><a href="#">About</a></li>
+  <li><a href="index.html">Home</a></li>
+
+  <!-- Collapsible for mobile dropdown -->
+  <li>
+    <ul class="collapsible collapsible-accordion">
+      <li>
+        <a class="collapsible-header">Destination</a>
+        <div class="collapsible-body">
+          <ul>
+            <li><a href="destOne.html">Singapore</a></li>
+            <li><a href="destTwo.html">New York City</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </li>
+
+  <li><a href="shop.html">Shop</a></li>
+  <li><a href="contactpage.html">Contact</a></li>
 </ul>

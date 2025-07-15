@@ -25,7 +25,6 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Ensure image area is fixed height */
 .card.shop-card .card-image {
   height: 220px;
   background-color: #f2f2f2;
@@ -35,7 +34,6 @@
   overflow: hidden;
 }
 
-/* Image scaling and fallback handling */
 .card.shop-card .card-image img {
   width: 100%;
   height: 100%;
@@ -43,9 +41,8 @@
   display: block;
 }
 
-/* Card content formatting */
 .card.shop-card .card-content {
-  min-height: 160px; /* adjust if needed */
+  min-height: 160px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -87,7 +84,11 @@
 }
 
 .featured-info {
-  flex: 1 1 300px;
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.7rem; /* optional, replaces need for margin-bottom in child elements */
 }
 
 .featured-info h4 {
@@ -116,9 +117,10 @@
   color: #333;
 }
 
+/* ✅ BUTTON FIX */
 .featured-info .add-to-cart-btn {
-  background-color: black;
-  color: white;
+  background-color: #1565c0 !important;
+  color: white !important;
   border-radius: 32px;
   padding: 0.8rem 2rem;
   font-weight: 600;
@@ -128,6 +130,23 @@
   cursor: pointer;
   margin-bottom: 0.7rem;
   display: inline-block;
+}
+
+.featured-info .add-to-cart-btn:hover {
+  background-color: #fdd835 !important;
+  color: #1a1a1a !important;
+}
+
+.btn {
+  background-color: #1565c0 !important;
+  color: white !important;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+.btn:hover {
+  background-color: #fdd835 !important;
+  color: #1a1a1a !important;
 }
 
 .featured-info small {
@@ -155,10 +174,13 @@
   object-fit: cover;
   border-radius: 12px;
 }
-
-.featured-info {
-  flex: 1 1 45%;
+.featured-action-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
+
 
 /* Responsive Layout for Featured Section */
 @media screen and (max-width: 768px) {
