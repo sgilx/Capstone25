@@ -1,43 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-body {
-  background-color: white;
-  font-family: 'Poppins', sans-serif;
+html, body {
+  height: 100%;
   margin: 0;
-  padding: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
 }
 
-.container {
+main {
+  flex: 1;
+}
+
+.container2 {
   padding-top: 60px;
-  padding-bottom: 60px;
+  padding-bottom: 100px;
 }
 
-h2, label {
+h2, h5, label {
   color: #1565c0;
 }
 
 .center-form {
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 .input-field input[type="text"],
 .input-field input[type="email"],
+.input-field input[type="time"],
+.input-field input[type="date"],
 .input-field textarea {
   background-color: #2a2f3a;
   border-radius: 8px;
   padding: 12px;
-  color: white;
+  color: black;
   font-size: 16px;
   border: none;
 }
+
 
 .input-field input[type="text"]::placeholder,
 .input-field input[type="email"]::placeholder,
 .input-field textarea::placeholder {
   color: #aaa;
 }
+
 
 .input-field input:focus,
 .input-field textarea:focus {
@@ -46,10 +55,12 @@ h2, label {
   border-bottom: 2px solid #1565c0 !important;
 }
 
+
 .input-field label {
   color: #1565c0 !important;
   font-weight: 500;
 }
+
 
 .btn {
   background-color: #1565c0;
@@ -59,5 +70,31 @@ h2, label {
 }
 
 .btn:hover {
-  background-color: #1565c0;
+  background-color: #0d47a1;
+}
+
+input[type="radio"] + span {
+  color: #2a2f3a;
+  font-weight: 500;
+}
+
+h5 {
+  font-weight: 600;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.input-field .datepicker,
+.input-field .timepicker {
+  background-color: #2a2f3a;
+  color: black;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+}
+
+.input-field input.datepicker::placeholder,
+.input-field input.timepicker::placeholder {
+  color: #aaa;
 }
