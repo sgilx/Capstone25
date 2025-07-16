@@ -4,173 +4,82 @@
   <meta charset="UTF-8" />
   <title>Globenest Contact Page</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Core styles and fonts -->
+
+  <!-- Styles -->
   <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="css/contactpage.css"/>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/contactpage.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <!-- Optional icon library (remove if unused) -->
+
+  <!-- Icons -->
   <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
 </head>
 
-<body style="font-family: 'Inter', sans-serif;">
-  <!-- Shared Navbar will be inserted here -->
-  <!-- Do not delete this element; it loads the site-wide navigation -->
+<body>
+  <!-- Shared Navbar -->
   <div id="navbar"></div>
 
-  <!-- Main content starts here -->
-  <!-- You can add your custom HTML content inside the <main> tag -->
-  <main class="container" style="margin-top: 2rem;">
-    <div class="container2">
-      <h2>Contact Me</h2>
-        <div class="row">
-          <div class="col s12 m8 l6 xl6 center-form">
-            <form method="POST" action="#">
-                <!-- Name -->
-                <div class="row">
-                <div class="input-field col s12">
-                    <input name="name" placeholder="John Doe" id="full_name" type="text" class="validate"/>
-                    <label for="full_name">Your name</label>
-                </div>
-                </div>
-                <!-- Email -->
-                <div class="row">
-                <div class="input-field col s12">
-                    <input name="email" placeholder="john.doe@example.com" id="email_address" type="email" class="validate" require/>
-                    <label for="email_address">Email address</label>
-                </div>
-                </div>
-                <!-- Message -->
-                <div class="row">
-                <div class="input-field col s12">
-                    <textarea name="message" id="message" class="materialize-textarea validate" placeholder="Tell us what you're thinking about..."></textarea>
-                    <label for="message">Message</label>
-                </div>
-                </div>
-                 <!-- Address -->
-                <h5>Address</h5>
-                <div class="row">
-                <div class="input-field col s12">
-                    <input id="street_address" type="text" name="street_address" placeholder="123 Main St" />
-                    <label for="street_address">Street Address</label>
-                </div>
-                <div class="input-field col s12">
-                    <input id="street_address2" type="text" name="street_address2" placeholder="Apt, suite, unit...."/>
-                    <label for="street_address2">Street Address Line 2</label>
-                </div>
-                <div class="input-field col s6">
-                    <input id="city" type="text" name="city" placeholder="Charlotte"/>
-                    <label for="city">City</label>
-                </div>
-                <div class="input-field col s6">
-                    <input id="state" type="text" name="state" placeholder="NC"/>
-                    <label for="state">State / Province</label>
-                </div>
-                <div class="input-field col s12">
-                    <input id="postal_code" type="text" name="postal_code" placeholder="21341"/>
-                    <label for="postal_code">Postal / Zip Code</label>
-                </div>
-                </div>
-                <!-- Travel Info -->
-                <h5>Travel Information</h5>
-                <div class="row">
-                <div class="input-field col s6">
-                    <input id="departure_city" type="text" name="departure_city" placeholder="Atlanta"/>
-                    <label for="departure_city">Departure City</label>
-                </div>
-                <div class="input-field col s6">
-                    <input id="arrival_city" type="text" name="arrival_city" placeholder="New York City"/>
-                    <label for="arrival_city">Arrival City</label>
-                </div>
-                </div>
-
-                <!-- Dates and Times -->
-                <div class="row">
-                <div class="input-field col s6">
-                    <input id="departure_date" type="text" class="datepicker" name="departure_date" placeholder="MM-DD-YYYY" />
-                    <label for="departure_date">Departure Date</label>
-                </div>
-                </div>
-
-                <div class="row">
-                <div class="input-field col s6">
-                    <input id="return_date" type="text" class="datepicker" name="return_date" placeholder="MM-DD-YYYY"/>
-                    <label for="return_date">Return Date</label>
-                </div>
-                </div>
-
-                <!-- Travel Arrangements -->
-                <div class="row">
-                <p>Travel arrangements needed:</p>
-                <p>
-                    <label>
-                    <input name="travel_needs" type="radio" value="Flight" />
-                    <span>Flight</span>
-                    </label>
-                </p>
-                <p>
-                    <label>
-                    <input name="travel_needs" type="radio" value="Hotel" />
-                    <span>Hotel</span>
-                    </label>
-                </p>
-                <p>
-                    <label>
-                    <input name="travel_needs" type="radio" value="Rental Car" />
-                    <span>Rental Car</span>
-                    </label>
-                </p>
-                <p>
-                    <label>
-                    <input name="travel_needs" type="radio" value="Other" />
-                    <span>Other</span>
-                    </label>
-                </p>
-                </div>
-                <!-- Submit -->
-                <div class="row">
-                <div class="col s12">
-                    <button type="submit" class="btn waves-effect waves-light">
-                    Submit
-                    </button>
-                </div>
-                </div>
-            </form>
-            </div>
+  <!-- Main Content -->
+  <main class="container">
+    <div class="container2 z-depth-1 white">
+      <h2 class="center-align">Contact Me</h2>
+      <form method="POST" action="#">
+        <!-- Name -->
+        <div class="input-field">
+          <input name="name" id="full_name" type="text" class="validate" placeholder="John Doe" />
+          <label for="full_name">Your name</label>
         </div>
-    </div>
-    </main>
 
-    <!-- Shared Footer will be inserted here -->
-  <!-- Do not delete this element; it loads the site-wide footer -->
+        <!-- Email -->
+        <div class="input-field">
+          <input name="email" id="email_address" type="email" class="validate" placeholder="john.doe@example.com" required />
+          <label for="email_address">Email address</label>
+        </div>
+
+        <!-- Topic -->
+        <div class="input-field">
+          <select id="topic" name="topic">
+            <option value="" disabled selected>Choose one</option>
+            <option value="feedback">Feedback</option>
+            <option value="support">Support</option>
+            <option value="business">Business Inquiry</option>
+            <option value="other">Other</option>
+          </select>
+          <label for="topic">What is this regarding?</label>
+        </div>
+
+        <!-- Message -->
+        <div class="input-field">
+          <textarea name="message" id="message" class="materialize-textarea" placeholder="Tell us what you're thinking about..."></textarea>
+          <label for="message">Message</label>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" class="btn waves-effect waves-light">Submit</button>
+      </form>
+    </div>
+  </main>
+
+  <!-- Shared Footer -->
   <div id="footer"></div>
-  <!-- JavaScript dependencies -->
+
+  <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="form.js"></script>
-  <!-- Dynamic layout loader for navbar and footer -->
-  <!-- Do not delete this script; it injects the shared navbar and footer -->
   <script>
-    // Load navbar from external file
+    M.AutoInit();
+
     fetch('navbar.html')
-  .then(res => res.text())
-  .then(html => {
-    document.getElementById('navbar').innerHTML = html;
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('navbar').innerHTML = html;
+        M.Sidenav.init(document.querySelectorAll('.sidenav'));
+        M.Dropdown.init(document.querySelectorAll('.dropdown-trigger'), {
+          coverTrigger: false,
+          constrainWidth: false
+        });
+      });
 
-    // Re-initialize Materialize components *after* navbar is injected
-    M.Sidenav.init(document.querySelectorAll('.sidenav'));
-
-    const dropdowns = document.querySelectorAll('.dropdown-trigger');
-    M.Dropdown.init(dropdowns, {
-      coverTrigger: false,
-      constrainWidth: false
-    });
-
-    const collapsibles = document.querySelectorAll('.collapsible');
-    M.Collapsible.init(collapsibles);
-  });
-
-    // Load footer from external file
     fetch('footer.html')
       .then(res => res.text())
       .then(html => {
@@ -179,4 +88,3 @@
   </script>
 </body>
 </html>
-
