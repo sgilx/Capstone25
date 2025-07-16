@@ -203,22 +203,28 @@
     <!-- Shared Footer -->
     <div id="footer"></div>
     <!-- Scripts -->
-     <script src="./js/dest.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
-      fetch('navbar.html')
-        .then(res => res.text())
-        .then(html => {
-          document.getElementById('navbar').innerHTML = html;
-          const elems = document.querySelectorAll('.sidenav');
-          M.Sidenav.init(elems);
-        });
-      fetch('footer.html')
-        .then(res => res.text())
-        .then(html => {
-          document.getElementById('footer').innerHTML = html;
-        });
-    </script>
+        fetch('navbar.html')
+          .then(res => res.text())
+          .then(html => {
+            document.getElementById('navbar').innerHTML = html;
+      
+            // Wait for navbar injection before initializing
+            M.Sidenav.init(document.querySelectorAll('.sidenav'));
+            M.Dropdown.init(document.querySelectorAll('.dropdown-trigger'), {
+              coverTrigger: false,
+              constrainWidth: false
+            });
+            M.Collapsible.init(document.querySelectorAll('.collapsible'));
+            M.Modal.init(document.querySelectorAll('.modal'));
+          });
+      
+        fetch('footer.html')
+          .then(res => res.text())
+          .then(html => {
+            document.getElementById('footer').innerHTML = html;
+          });
+      </script>
+      <script src="./js/dest.js"></script>
 </body>
 </html>

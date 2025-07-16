@@ -44,10 +44,9 @@
 /* Hero Text */
 .hero-content {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -72,6 +71,10 @@
 .hero-content p {
   font-size: 1.4rem;
   margin-bottom: 2rem;
+}
+
+.hero-content h5 {
+  margin-bottom: 1.5rem;
 }
 
 /* Slider Indicators */
@@ -142,6 +145,7 @@
   margin-bottom: 1.5rem;
   text-align: center;
 }
+
 
 /* SEE MORE BUTTON STYLES */
 .dest-section .btn,
