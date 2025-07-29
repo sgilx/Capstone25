@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Shop – Globenest</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Dependencies -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./css/dest.css">
+      <link rel="stylesheet" href="css/contactpage.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
+</head>
+<body>
+    <!-- Shared Navbar -->
+    <div id="navbar"></div>
+    <!-- Main Content -->
+    <main class="container" style="margin-top: 2rem; margin-bottom: 2rem;">
+        <div class="container2 z-depth-1 white">
+            <h4 class="center-align">Build your next adventure</h4>
+            <form id="travelForm" class="row">
+            <div class="input-field col s6">
+                <input type="text" id="origin" value="CLT" required>
+                <label for="origin">From (IATA Code)</label>
+            </div>
+
+            <div class="input-field col s6">
+                <input type="text" id="destination" value="NYC" required>
+                <label for="destination">To (IATA Code)</label>
+            </div>
+
+            <div class="input-field col s6">
+                <input type="date" class="datepicker" id="departure" required>
+                <label for="departure">Departure Date</label>
+            </div>
+
+            <div class="input-field col s6">
+                <input type="number" id="passengers" value="1" min="1" required>
+                <label for="passengers">Passengers</label>
+            </div>
+
+            <div class="col s12 center-align">
+                <button type="submit" class="btn waves-effect waves-light blue darken-3 btn-small">
+                    <i class="material-icons right">search</i>search
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <div id="results"></div>
+    <div class="col s12 center-align">
+        <a href="https://www.iata.org/en/publications/directories/code-search/" target="_blank" class="btn waves-effect waves-light blue darken-3 btn-small">Find your city's code here</a>
+    </div>
+</main>
+
+    <!-- Shared Footer -->
+    <div id="footer"></div>
+    <!-- Scripts -->
+    <script src="./js/dest.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="travel.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        fetch('navbar.html')
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById('navbar').innerHTML = html;
+
+    // Re-initialize Materialize components *after* navbar is injected
+    M.Sidenav.init(document.querySelectorAll('.sidenav'));
+
+    const dropdowns = document.querySelectorAll('.dropdown-trigger');
+    M.Dropdown.init(dropdowns, {
+      coverTrigger: false,
+      constrainWidth: false
+    });
+
+    const collapsibles = document.querySelectorAll('.collapsible');
+    M.Collapsible.init(collapsibles);
+  });
+
+      fetch('footer.html')
+        .then(res => res.text())
+        .then(html => {
+          document.getElementById('footer').innerHTML = html;
+        });
+    </script>
+</body>
+</html>
