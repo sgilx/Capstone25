@@ -21,6 +21,7 @@ async function getAccessToken() {
         })
     });
 
+    //throw error if no token is retrieved
     if (!response.ok) {
         const error = await response.text();
         throw new Error(`Failed to get access token: ${response.status} - ${error}`);
@@ -39,6 +40,7 @@ async function getAccessToken() {
 async function fetchFlights(origin, destination, departure, passengers) {
     const access_token = await getAccessToken();
 
+    //builds query string to use to search the API for provided 
     const query = new URLSearchParams({
         originLocationCode: origin,
         destinationLocationCode: destination,
