@@ -94,7 +94,8 @@ input.addEventListener('submit', async function (e) {
     resultsContainer.innerHTML = '';
 
 
-    //iterate through each of the flights returned 
+    //iterate through each flights returned and access the first segment to retrieve the first 
+    // itinerary and corresponing info
     flights.data.forEach(flight => {
         const seg = flight.itineraries[0].segments[0];
         const depTime = new Date(seg.departure.at).toLocaleString();
