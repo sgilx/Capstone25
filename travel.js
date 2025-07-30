@@ -60,8 +60,7 @@ async function fetchFlights(origin, destination, departure, passengers) {
         throw new Error(`Failed to fetch flights: ${response.status} - ${error}`);
     }
 
-      const data = await response.json();
-      return data;
+      return await response.json();
 }
 
 //create const to retrieve travel form 
